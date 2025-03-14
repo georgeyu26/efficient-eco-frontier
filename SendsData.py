@@ -22,7 +22,7 @@ sends = [
     ("Spaced Rainbows", 12, 12),
     ("Grouped Rainbows", 13, 100),
     ("Spaced Ceramics", 13, 15),
-    ("Grouped Ceramics", 16, 27),
+    ("Grouped Ceramics", 16, 23),
     ("Tight Leads", 23, 100)
 ]
 
@@ -64,4 +64,4 @@ for send, first_round, last_round in sends:
 
 # Print the available sends for each round
 for round_num in range(1, 31):
-    print(f"Round {round_num}: {round_sends[round_num]}")
+    print(f"r{round_num} = [BloonSend(eco_data['Cost/6s'][i], eco_data['Eco/6s'][i], eco_data['Send Name'][i]) for i in {round_sends[round_num]}]")
